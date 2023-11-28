@@ -1,162 +1,175 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 5 Responsive Breakpoints</title>
-
-    Bootstrap CSS -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-
-<div class="container mt-5">
-
-    <h2 class="text-center mb-4">Responsive Breakpoints</h2>
-
-    Extra Small Screens (less than 576px) -->
-    <!-- <div class="alert alert-primary d-block d-sm-none" role="alert">
-        Extra Small Screens (less than 576px)
-    </div> -->
-
-    <!-- Small Screens (576px and up) -->
-    <!-- <div class="alert alert-secondary d-none d-sm-block d-md-none" role="alert">
-        Small Screens (576px and up)
-    </div> -->
-
-    <!-- Medium Screens (768px and up) -->
-    <!-- <div class="alert alert-success d-none d-md-block d-lg-none" role="alert">
-        Medium Screens (768px and up)
-    </div> -->
-
-    <!-- Large Screens (992px and up) -->
-    <div class="alert alert-warning d-none d-lg-block d-xl-none" role="alert">
-        Large Screens (992px and up)
-    </div>
-
-    <!-- Extra Large Screens (1200px and up) -->
-    <!-- <div class="alert alert-danger d-none d-xl-block" role="alert">
-        Extra Large Screens (1200px and up)
-    </div>
-
-</div> -->
-
-<!-- Bootstrap JS (optional) -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap Auto Column Layout</title>
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <title>User Registration Form</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .error{
+      font-size: 2rem;
+      color: red;
+    }
+  </style>
 </head>
 <body>
 
 <div class="container mt-5">
-
-    <h2 class="text-center mb-4">Responsive Auto Column Layout</h2>
-
-    <!-- Responsive Column Layout -->
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
-
-        <!-- Example Content in Columns -->
-        <div class="col">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Card 1</h5>
-                    <p class="card-text">Some text here.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Card 2</h5>
-                    <p class="card-text">Some text here.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Card 2</h5>
-                    <p class="card-text">Some text here.</p>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="col">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Card 2</h5>
-                    <p class="card-text">Some text here.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Card 2</h5>
-                    <p class="card-text">Some text here.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Card 2</h5>
-                    <p class="card-text">Some text here.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Card 2</h5>
-                    <p class="card-text">Some text here.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Card 2</h5>
-                    <p class="card-text">Some text here.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Card 2</h5>
-                    <p class="card-text">Some text here.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Add more columns as needed -->
-
+  <form id="userForm" >
+    <div class="form-group">
+      <label for="firstName">First Name:</label>
+      <input type="text" class="form-control" id="firstName"><br>
+      <span class="error" id="fn"></span>
     </div>
-
+    <div class="form-group">
+      <label for="lastName">Last Name:</label>
+      <input type="text" class="form-control" id="lastName"> <br>
+      <span class="error" id="ln"></span>
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" class="form-control" id="password"><br>
+      <span class="error" id="upassword"></span>
+    </div>
+    <div class="form-group">
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="password" class="form-control" id="confirmPassword"><br>
+      <span class="error" id="cupassword"></span>
+    </div>
+    <div class="form-group">
+      <label for="mobile">Mobile:</label>
+      <input type="text" class="form-control" id="mobile" ><br>
+      <span class="error" id="cmob"></span>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" ><br>
+      <span class="error" id="uemail"></span>
+    </div>
+    <button type="button" class="btn btn-primary" onclick=" return submitForm()">Submit</button>
+  </form>
 </div>
 
-<!-- Bootstrap JS (optional) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function submitForm() {
+    // Get form values
+    var firstName = document.getElementById('firstName').value;
+    var lastName = document.getElementById('lastName').value;
+    var password = document.getElementById('password').value;
+    var confirmPassword = document.getElementById('confirmPassword').value;
+    var mobile = document.getElementById('mobile').value;
+    var email = document.getElementById('email').value;
+
+    //  Validation Code Start
+     if(firstName === ''){
+      document.getElementById('fn').innerHTML="**FirstName Field Is Fill" 
+          return false
+     }
+
+      if((firstName.length <=2) || (firstName.length>20)){
+        document.getElementById('fn').innerHTML="**Greather Two And Less Than Twenty Charecter" 
+          return false
+      }
+
+      if(!isNaN(firstName)){
+        document.getElementById('fn').innerHTML="**Only Charecter Allow Not Allow Number" 
+          return false 
+      }
+
+      if(lastName === ''){
+      document.getElementById('ln').innerHTML="**LastName Field Is Fill" 
+          return false
+     }
+
+      if((lastName.length <=2) || (lastName.length>20)){
+        document.getElementById('ln').innerHTML="**Greather Two And Less Than Twenty Charecter" 
+          return false
+      }
+
+      if(!isNaN(lastName)){
+        document.getElementById('ln').innerHTML="**Only Charecter Allow Not Allow Number" 
+          return false 
+      }
+
+
+      if(password === ''){
+      document.getElementById('upassword').innerHTML="**Password Field Is Fill" 
+          return false
+     }
+
+      if((password.length <=5) || (password.length>20)){
+        document.getElementById('upassword').innerHTML="**Greather Five And Less Than Twenty Charecter" 
+          return false
+      }
+
+      if(isNaN(password)){
+        document.getElementById('upassword').innerHTML="**Only Number Allow Not Allow Charecter Allow" 
+          return false 
+      }
+
+      if(confirmPassword === ''){
+      document.getElementById('cupassword').innerHTML="** Confirm Password Field Is Fill" 
+          return false
+     }
+
+      if(password!=confirmPassword){
+        document.getElementById('cupassword').innerHTML="** Password And Confirm Password Dos't Match" 
+          return false
+      }
+
+      if(mobile === ''){
+      document.getElementById('cmob').innerHTML="** Mobile Field Is Fill" 
+          return false
+     }
+     if(mobile.length!=10){
+      document.getElementById('cmob').innerHTML="** Only Ten Number Allow" 
+          return false
+     }
+
+     if(isNaN(mobile)){
+        document.getElementById('cmob').innerHTML="**Only Number Allow Not Allow Charecter Allow" 
+          return false 
+      }
+
+      if(email === ''){
+      document.getElementById('uemail').innerHTML="** Email Field Is Fill" 
+          return false
+     }
+
+      if(email.indexOf('@')<=0){
+        document.getElementById('uemail').innerHTML="**@Invalid Postion" 
+          return false
+      }
+
+      if((email.charAt(email.length-4)!='.') && (email.charAt(email.length-3)!='.')){
+        document.getElementById('uemail').innerHTML="**. Invalid Postion" 
+          return false
+      }
+     
+    // Create user object
+    var user = {
+      firstName: firstName,
+      lastName: lastName,
+      password: password,
+      mobile: mobile,
+      email: email
+    };
+
+    // Store user data in local storage
+    localStorage.setItem('user', JSON.stringify(user));
+
+    // Clear the form
+    document.getElementById('userForm').reset();
+
+    // Display success message
+    alert('User data submitted and stored in local storage');
+  }
+</script>
 
 </body>
 </html>
-
